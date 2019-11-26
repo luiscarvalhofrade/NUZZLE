@@ -1,4 +1,4 @@
 <h1>Pets</h1>
 <% @pets.each do |pet| %>
-<p><%= pet.name %> - <%= pet.description %>. <%= pet.price %></p>
+<p><%= link_to pet.name, pet %> - <%= pet.description %>. Price: BRL<%= pet.price %></p>
 <% end %>
