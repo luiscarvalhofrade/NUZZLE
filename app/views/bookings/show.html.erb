@@ -3,5 +3,5 @@
 <p>Period: <%= @booking[:start_on] %> -- <%= @booking[:end_on] %></p>
 <p>Price: BRL<%= @booking[:price] %></p>
 
-<p><%= link_to "back to bookings index", bookings_path %></p>
-<p><%= link_to "back to pets index", pets_path %></p>
+<p><%= link_to "back to bookings index", bookings_path, class: "button" %></p>
+<p><%= link_to "back to pets index", pets_path, class: "button" %></p>
