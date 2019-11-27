@@ -2,5 +2,5 @@
 <p><%= @pet[:name] %></p>
 <p>Description: <%= @pet[:description] %></p>
 <p>Price: BRL<%= @pet[:price] %></p>
-<p><%= link_to "Book", new_pet_booking_path(@pet) %></p>
-<p><%= link_to "back to pets index", pets_path %></p>
+<p><%= link_to "Book", new_pet_booking_path(@pet), class: "button" %></p>
+<p><%= link_to "back to pets index", pets_path, class: "button" %></p>
