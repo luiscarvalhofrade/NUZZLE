@@ -8,7 +8,9 @@ class BookingsController < ApplicationController
     @pet = Pet.find(params[:pet_id])
     @booking = Booking.new(booking_params)
     @booking.pet = @pet
-    if @pet.save
+    @booking.price = @pet.price
+    @booking.user = current_user
+    if @booking.save
       redirect_to pet_path(@pet)
     else
       render :new
