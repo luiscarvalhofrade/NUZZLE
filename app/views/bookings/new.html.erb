@@ -7,11 +7,13 @@
         <%= f.input :price, disabled: true, input_html: { value: @pet.price } %>
         <%= f.input :start_on, as: :string, input_html: {type: :date} %>
         <%= f.input :end_on, as: :string, input_html: {type: :date} %>
-        <%= f.button :submit, class:"btn btn-primary"%>
+        <%= f.button :submit, class: "button"%>
         <% end %>
-
+        <br>
         <p><%= link_to "back to bookings index", bookings_path, class: "button" %></p>
+        <br>
         <p><%= link_to "back to pets index", pets_path, class: "button" %></p>
+        <br>
     </div>
   </div>
 </div>
