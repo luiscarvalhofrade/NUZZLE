@@ -2,3 +2,4 @@
 <% @pets.each do |pet| %>
 <p><%= link_to pet.name, pet %> - <%= pet.description %>. Price: BRL<%= pet.price %></p>
 <% end %>
+<p><%= link_to "Add your pet", new_pet_path %></p>
