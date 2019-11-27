@@ -1,7 +1,11 @@
 <h1>New Booking</h1>
+
 <%= simple_form_for [@pet, @booking] do |f| %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.label :end_on %>
+  <%= f.input :price, disabled: true, input_html: { value: @pet.price } %>
+  <%= f.input :start_on, as: :string, input_html: {type: :date} %>
+  <%= f.input :end_on, as: :string, input_html: {type: :date} %>
+  <%= f.button :submit %>
   <% end %>
+
+  <p><%= link_to "back to index", pets_path %></p>
 
