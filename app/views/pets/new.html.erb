@@ -1,0 +1,9 @@
+<h1>Add your Pet here:</h1>
+<%= simple_form_for [@pet] do |f| %>
+<%= f.input :name %>
+<p>How would you describe your pet?</p>
+<%= f.input :description %>
+<p>What's the price per day?</p>
+<%= f.input :price %>
+<%= f.submit "Add your pet!", class:"btn btn-primary"%>
+<% end %>
