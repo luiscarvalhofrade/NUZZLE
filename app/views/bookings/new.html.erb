@@ -1,12 +1,18 @@
-<h1>New Booking</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1>Place a new Booking on <%= @pet.name %></h1>
 
-<%= simple_form_for [@pet, @booking] do |f| %>
-  <%= f.input :price, disabled: true, input_html: { value: @pet.price } %>
-  <%= f.input :start_on, as: :string, input_html: {type: :date} %>
-  <%= f.input :end_on, as: :string, input_html: {type: :date} %>
-  <%= f.button :submit, class:"btn btn-primary"%>
-  <% end %>
+      <%= simple_form_for [@pet, @booking] do |f| %>
+        <%= f.input :price, disabled: true, input_html: { value: @pet.price } %>
+        <%= f.input :start_on, as: :string, input_html: {type: :date} %>
+        <%= f.input :end_on, as: :string, input_html: {type: :date} %>
+        <%= f.button :submit, class:"btn btn-primary"%>
+        <% end %>
 
-  <p><%= link_to "back to bookings index", bookings_path %></p>
-  <p><%= link_to "back to pets index", pets_path %></p>
+        <p><%= link_to "back to bookings index", bookings_path %></p>
+        <p><%= link_to "back to pets index", pets_path %></p>
+    </div>
+  </div>
+</div>
 
