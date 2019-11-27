@@ -2,5 +2,6 @@
 <% @bookings.each do |booking| %>
 <p><%= link_to booking.pet.name, booking %></p>
 <% end %>
-
+<br>
 <%= link_to "back to pets index", pets_path, class: "button" %>
+<br>
