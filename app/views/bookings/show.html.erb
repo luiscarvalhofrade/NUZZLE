@@ -1,4 +1,7 @@
 <h1>Booking</h1>
-<p>Period: <%= @booking[:star_on] %> -- <%= @booking[:end_on] %></p>
+<p>Pet: <%= @booking.pet.name %></p>
+<p>Period: <%= @booking[:start_on] %> -- <%= @booking[:end_on] %></p>
 <p>Price: BRL<%= @booking[:price] %></p>
-<p><%= link_to "back to index", pets_path %></p>
+
+<p><%= link_to "back to bookings index", bookings_path %></p>
+<p><%= link_to "back to pets index", pets_path %></p>
