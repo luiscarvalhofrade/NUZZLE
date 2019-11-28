@@ -5,9 +5,9 @@
       <h1>Place a new Booking on <%= @pet.name %></h1>
         <p>Price per day: R$ <%= @pet.price %></p>
       <%= simple_form_for [@pet, @booking] do |f| %>
-        <%= f.input :start_on, as: :string, input_html: {type: :date} %>
-        <%= f.input :end_on, as: :string, input_html: {type: :date} %>
-        <%= f.button :submit, 'Book your nuzzle now!', class: "button", data: {confirm: "Yeay! 🎉 You are now booked in to nuzzle this pet!"}%>
+        <%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %>
+        <%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %>
+        <%= f.button :submit, 'Book now!', class: "button"%>
         <% end %>
         <br>
         <p><%= link_to "Go to your bookings", bookings_path, class: "button" %></p>
