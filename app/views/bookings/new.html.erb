@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
+      <!-- WE SHOULD INSERT THE ANIMAL CARD -->
       <h1>Place a new Booking on <%= @pet.name %></h1>
-
+        <p>Price per day: R$ <%= @pet.price %></p>
       <%= simple_form_for [@pet, @booking] do |f| %>
-        <%= f.input :price, disabled: true, input_html: { value: @pet.price } %>
         <%= f.input :start_on, as: :string, input_html: {type: :date} %>
         <%= f.input :end_on, as: :string, input_html: {type: :date} %>
         <%= f.button :submit, 'Book now!', class: "button"%>
