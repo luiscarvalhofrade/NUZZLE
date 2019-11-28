@@ -1,9 +1,8 @@
-<h1>PET</h1>
-<p><%= @pet[:name] %></p>
+<h1><%= @pet[:name] %></h1>
 <p>Description: <%= @pet[:description] %></p>
 <p>Price: R$<%= @pet[:price] %></p>
 <br>
-<p><%= link_to "Book", new_pet_booking_path(@pet), class: "button" %></p>
+<p><%= link_to "Nuzzle this pet!", new_pet_booking_path(@pet), class: "button" %></p>
 <br>
-<p><%= link_to "back to pets index", pets_path, class: "button" %></p>
+<p><%= link_to "Back to available pets", pets_path, class: "button" %></p>
 <br>
