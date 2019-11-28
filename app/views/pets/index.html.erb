@@ -3,9 +3,10 @@
     <h1>Pets to snuggle on NUZZLE</h1>
       <br>
       <br>
-        <% @pets.each do |pet| %>
-        <p><%= link_to pet.name, pet %> - <%= pet.description %> Price: R$<%= pet.price %></p>
-        <% end %>
+        <div class="testing-card-product-infos">
+          <% @pets.each do |pet| %>
+            <p><%= link_to pet.name.capitalize, pet %> - <%= pet.description %> Price: R$<%= pet.price %></p>
+          <% end %>
       <br>
       <br>
         <p><%= link_to "All bookings", bookings_path, class: "button" %></p>
