@@ -4,6 +4,13 @@
       <br>
       <br>
 
+        <% @pets.each do |pet| %>
+        <p><%= link_to pet.name, pet %> - <%= pet.description %> Price: R$<%= pet.price %></p>
+        <% end %>
+      <div class='pet_list'>
+        <%= render "shared/cardgrid" %>
+      </div>
+
 
       <div class='pet_list'>
         <% @pets.each do |pet| %>
