@@ -1,11 +1,4 @@
 <p><%= render "shared/card", pet: @pet %> </p>
 <br>
-<% if @pet.owner == current_user %>
-    <p><%= link_to "You already own this pet!", pets_path(@pet), class: "button" %></p>
-    <% else %>
-    <p><%= link_to "Nuzzle this pet", new_pet_booking_path(@pet), class: "button" %></p>
-    <% end %>
-<p><%= link_to "Book", new_pet_booking_path(@pet), class: "button" %></p>
-<br>
 <p><%= link_to "back to pets index", pets_path, class: "button" %></p>
 <br>
