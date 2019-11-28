@@ -4,12 +4,12 @@
       <br>
       <br>
 
-        <% @pets.each do |pet| %>
-        <p><%= link_to pet.name, pet %> - <%= pet.description %> Price: R$<%= pet.price %></p>
-        <% end %>
+
       <div class='pet_list'>
-        <%= render "shared/cardgrid" %>
-    </div>
+        <% @pets.each do |pet| %>
+          <%= render "shared/pet_card", pet: pet %>
+        <% end %>
+      </div>
       <br>
       <br>
         <p><%= link_to "All bookings", bookings_path, class: "button" %></p>
