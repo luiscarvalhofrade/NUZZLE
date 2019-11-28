@@ -7,7 +7,7 @@
       <%= simple_form_for [@pet, @booking] do |f| %>
         <%= f.input :start_on, as: :string, input_html: {type: :date} %>
         <%= f.input :end_on, as: :string, input_html: {type: :date} %>
-        <%= f.button :submit, 'Book now!', class: "button"%>
+        <%= f.button :submit, 'Book your nuzzle now!', class: "button", data: {confirm: "Yeay! 🎉 You are now booked in to nuzzle this pet!"}%>
         <% end %>
         <br>
         <p><%= link_to "Go to your bookings", bookings_path, class: "button" %></p>
