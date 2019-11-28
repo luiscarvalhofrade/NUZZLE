@@ -2,9 +2,10 @@
   <div class="product-img"style="background-image: url('https://i.imgur.com/PtlwGed.jpg')">
   </div>
   <div class="testing-card-product-infos">
-    <h2>Alfie</h2>
-    <h3>Tabby Cat</h3>
-    <p>Meow! I'm Alfie. I love to play with you and catnip makes me go totally bonkers. You'll love it! Bring me home if you dare. I'll make your life so much fun!</p>
-    <button class="button">Book Alfie</button>
+    <h2><%= pet.name %></h2>
+    <h3><%= pet.species %></h3>
+    <p><%= pet.description %></p>
+    <h3>Price per day R$<%= pet.price %></h3>
+    <p><%= link_to "Nuzzle this pet", new_pet_booking_path(@pet), class: "button" %></p>
   </div>
 </div>
