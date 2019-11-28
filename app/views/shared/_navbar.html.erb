@@ -5,6 +5,7 @@
     <a href="#">Find Pets</a>
   </div>
   <div class="navbar-profile">
+    <%= link_to 'logout', destroy_user_session_path, method: :delete  %>
     <a href="#">My Nuzzle <i class="fas fa-heart"></i> </a>
    <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
   </div>
