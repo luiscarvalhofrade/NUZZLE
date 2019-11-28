@@ -39,3 +39,4 @@ charlie = Pet.create(name: 'Charlie', description: 'Greetings, humans. I\'m quit
 peter = Pet.create(name: 'Peter', description: 'Boing boing boing! I\’m Peter the rabbit, just like your childhood books. You can brush my hair and feed me all the carrots and celery you have, because I love to eat!' , price: 10, owner_id: user.id, species: 'Long Haired Rabbit', photo: 'https://i.imgur.com/aDLzu2S.jpg')
 merlion = Pet.create(name: 'Merlion', description: 'Prrr! Don\’t you love my little button nose? I’m the sweetest, most beautiful little kitten you’ve ever seen. My fur is so soft and you\'ll love to look into my pretty blue eyes.' , price: 10, owner_id: user.id, species: 'Siamese Kitten', photo: 'https://i.imgur.com/pr12zvu.jpg')
 
+

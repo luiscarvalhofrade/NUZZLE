@@ -1,0 +1,12 @@
+<div class="pet_card">
+  <div class="product-img" style="background-image: url(<%= pet.photo %>);">
+  </div>
+  <div  class="grid-card-infos">
+    <h2><%= pet.name %></h2>
+    <h3><%= pet.species %></h3>
+    <p><%= pet.description %></p>
+    <h3> Price: R$ <%= pet.price %></h3>
+    <br>
+    <%= link_to "Book #{pet.name}", pet_path(pet), class: "button" %>
+  </div>
+</div>

@@ -8,7 +8,7 @@
           <div class="testing-card-product-infos">
             <h2><%= @pet[:name].capitalize%></h2>
                 <p><%= @pet[:description]%></p>
-              <h3>Rate per day: R$<%= @pet[:price] %></h3>
+              <h3>Price per day R$<%= @pet[:price] %></h3>
               <%= simple_form_for [@pet, @booking] do |f| %>
                 <%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %>
                 <%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %>
@@ -16,9 +16,12 @@
                 <% end %>
           </div>
     </div>
+    <form class="form-inline">
+      <p><%= link_to "Go to your bookings", bookings_path, class: "button" %></p>
+      <br>
+      <p><%= link_to "Back to available pets", pets_path, class: "button" %></p>
+      <br>
+    </form>
 </div>
-        <p><%= link_to "Go to your bookings", bookings_path, class: "button" %></p>
-        <br>
-        <p><%= link_to "Back to available pets", pets_path, class: "button" %></p>
-        <br>
+
 
