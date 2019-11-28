@@ -1,20 +1,24 @@
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <h1>Place a new Booking on <%= @pet.name %></h1>
-
-      <%= simple_form_for [@pet, @booking] do |f| %>
-        <%= f.input :price, disabled: true, input_html: { value: @pet.price } %>
-        <%= f.input :start_on, as: :string, input_html: {type: :date} %>
-        <%= f.input :end_on, as: :string, input_html: {type: :date} %>
-        <%= f.button :submit, class: "button"%>
-        <% end %>
-        <br>
-        <p><%= link_to "back to bookings index", bookings_path, class: "button" %></p>
-        <br>
-        <p><%= link_to "back to pets index", pets_path, class: "button" %></p>
-        <br>
+    <div class="col-md-12">
+      <br>
+      <h1>Place a new Booking</h1>
+        <div class="testing-card-product">
+          <div class="product-img"style="background-image: url('https://i.imgur.com/PtlwGed.jpg')">
+        </div>
+          <div class="testing-card-product-infos">
+            <h2><%= @pet[:name].capitalize%></h2>
+                <p><%= @pet[:description]%></p>
+              <h3>Rate per day: R$<%= @pet[:price] %></h3>
+              <%= simple_form_for [@pet, @booking] do |f| %>
+                <%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %>
+                <%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %>
+                <%= f.button :submit, 'Book your nuzzle now!', class: "button", data: {confirm: "Yeay! 🎉 You are now booked in to nuzzle this pet!"}%>
+                <% end %>
+          </div>
     </div>
-  </div>
 </div>
+        <p><%= link_to "Go to your bookings", bookings_path, class: "button" %></p>
+        <br>
+        <p><%= link_to "Back to available pets", pets_path, class: "button" %></p>
+        <br>
 

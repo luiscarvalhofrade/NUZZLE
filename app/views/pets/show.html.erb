@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>PET</h1>
 <p><%= @pet[:name] %></p>
 <p><%= render "shared/card" %> </p>
@@ -7,4 +8,24 @@
 <p><%= link_to "Book", new_pet_booking_path(@pet), class: "button" %></p>
 <br>
 <p><%= link_to "back to pets index", pets_path, class: "button" %></p>
+=======
+<div class="testing-card-product">
+  <div class="product-img"style="background-image: url('https://i.imgur.com/PtlwGed.jpg')">
+  </div>
+  <div class="testing-card-product-infos">
+    <h2><%= @pet[:name].capitalize%></h2>
+    <h3><%= @pet[:species]%></h3>
+    <p>Meow! I'm Alfie. I love to play with you and catnip makes me go totally bonkers. You'll love it! Bring me home if you dare. I'll make your life so much fun!</p>
+    <h3>Rate per day: R$<%= @pet[:price] %></h3>
+    <% if @pet.owner == current_user %>
+    <p><%= link_to "You already own this pet!", pets_path(@pet), class: "button" %></p>
+    <% else %>
+    <p><%= link_to "Nuzzle this pet", new_pet_booking_path(@pet), class: "button" %></p>
+    <% end %>
+  </div>
+</div>
+
+<!-- <p>Description: <%= @pet[:description] %></p> -->
+<p><%= link_to "Back to available pets", pets_path, class: "button" %></p>
+>>>>>>> 3b97577e0dade49c8b0d049d1a0e60501fd33cde
 <br>

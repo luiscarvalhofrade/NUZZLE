@@ -3,12 +3,19 @@
     <h1>Pets to snuggle on NUZZLE</h1>
       <br>
       <br>
+<<<<<<< HEAD
         <% @pets.each do |pet| %>
         <p><%= link_to pet.name, pet %> - <%= pet.description %> Price: R$<%= pet.price %></p>
         <% end %>
       <div class='pet_list'>
         <%= render "shared/cardgrid" %>
       </div>
+=======
+        <div class="testing-card-product-infos">
+          <% @pets.each do |pet| %>
+            <p><%= link_to pet.name.capitalize, pet %> - <%= pet.description %> Price: R$<%= pet.price %></p>
+          <% end %>
+>>>>>>> 3b97577e0dade49c8b0d049d1a0e60501fd33cde
       <br>
       <br>
         <p><%= link_to "All bookings", bookings_path, class: "button" %></p>
