@@ -1,0 +1,44 @@
+.container {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  padding: 32px;
+}
+
+.product-img {
+  height: 250px;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.grid-card-infos {
+  h2, h3 {
+    color: #A0384D;
+    padding: 5px;
+  }
+}
+
+.grid-card-infos h2 {
+  font-size: 36px;
+}
+
+.grid-card-infos h3 {
+  font-size: 24px;
+}
+
+.grid-card-infos p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #323232;
+}
+
+.pet_card {
+  width: 20em;
+  padding: 20px;
+  background-size: contain;
+  border-radius: 5px;
+}
+
+.pet_list {
+  display: flex;
+}
