@@ -1,7 +1,7 @@
 <h1>PET</h1>
 <p><%= @pet[:name] %></p>
 <p>Description: <%= @pet[:description] %></p>
-<p>Price: BRL<%= @pet[:price] %></p>
+<p>Price: R$<%= @pet[:price] %></p>
 <br>
 <p><%= link_to "Book", new_pet_booking_path(@pet), class: "button" %></p>
 <br>
