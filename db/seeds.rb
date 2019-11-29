@@ -23,12 +23,10 @@
 # end
 
 # puts 'Ended seeding!'
-Pet.destroy_all
-User.destroy_all
 
 user = User.create(email: 'me@me.com', password: '123456')
 
-kwankie = Pet.create(name: 'Kwankie', description: 'Meow! I\'m Kwankie. I love to play with you and catnip makes me go totally bonkers. You\'ll love it! Bring me home if you dare. I\'ll make your life so much fun!' , price: 10, owner_id: user.id, species: 'Tabby Cat', photo: 'photo: https://i.imgur.com/PtlwGed.jpg')
+kwankie = Pet.create(name: 'Kwankie', description: 'Meow! I\'m Kwankie. I love to play with you and catnip makes me go totally bonkers. You\'ll love it! Bring me home if you dare. I\'ll make your life so much fun!' , price: 10, owner_id: user.id, species: 'Tabby Cat', photo: 'https://i.imgur.com/PtlwGed.jpg')
 karma = Pet.create(name: 'Karma', description: 'I\'m the coolest, don\'t you agree? I can change colors and pinch you just a little bit when I walk. You know you want to hold an exotic pet like me!' , price: 30, owner_id: user.id, species: 'Chameleon', photo: 'https://i.imgur.com/MLRHHgP.jpg')
 logan = Pet.create(name: 'Logan', description: 'Blurb, blurb, blurb. You\'ll love staring into my googley eyes and watching me wiggle around my tank. Let\'s play peek a boo!' , price: 5, owner_id: user.id, species: 'Goldfish', photo: 'https://i.imgur.com/kIeMOJW.jpg')
 prince = Pet.create(name: 'Prince', description: 'What does the fox say? I don\’t know, but if a princess kisses me I might turn into a prince! Watch me jump and be sure to keep me wet. That\’s what she said.' , price: 15, owner_id: user.id, species: 'Frog', photo: 'https://i.imgur.com/NDgy1TI.jpg')
