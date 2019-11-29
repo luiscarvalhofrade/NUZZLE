@@ -7,7 +7,6 @@
     <p><%= pet.description %></p>
     <h3>Price per day R$<%= pet.price %></h3>
     <form class="form-inline">
-      <p><%= link_to "back to available pets", pets_path, class: "button" %></p>
       <% if @pet.owner == current_user %>
       <p><%= link_to "You already own this pet!", pets_path(@pet), class: "button" %></p>
       <% else %>
