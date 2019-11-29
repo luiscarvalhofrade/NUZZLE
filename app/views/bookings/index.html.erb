@@ -1,8 +1,20 @@
-<h1>Bookings</h1>
-<% @bookings.each do |booking| %>
-<p><%= link_to booking.pet.name, booking %></p>
-<% end %>
-<br>
-<%= link_to "Back to available pets", pets_path, class: "button" %>
-<br>
-<br>
+<div class="container">
+  <div>
+    <h1>NUZZLE bookings</h1>
+      <br>
+      <br>
+      <div class='pet_list'>
+        <% @bookings.each do |booking| %>
+          <%= render "shared/booking_card", booking: booking %>
+        <% end %>
+      </div>
+      <br>
+      <form class="form-inline">
+      <br>
+        <p><%= link_to "All bookings", bookings_path, class: "button" %></p>
+        <br>
+        <p><%= link_to "Add your pet", new_pet_path, class: "button" %></p>
+        <br>
+        </form>
+    </div>
+</div>
