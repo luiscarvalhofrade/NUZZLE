@@ -1,8 +1,4 @@
-<h1>Booking</h1>
-<p>Pet: <%= @booking.pet.name %></p>
-<p>Period: <%= @booking.start_on %> -- <%= @booking.end_on %></p>
-<p>Price: R$<%= @booking.price %></p>
-
+<p><%= render "shared/card_booking", booking: @booking %> </p>
 <p><%= link_to "Go to your bookings", bookings_path, class: "button" %></p>
 <br>
 <p><%= link_to "Back to available pets", pets_path, class: "button" %></p>
