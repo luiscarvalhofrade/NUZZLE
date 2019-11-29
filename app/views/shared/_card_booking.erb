@@ -1,0 +1,11 @@
+<div class="testing-card-product">
+  <div class="product-img"style="background-image: url('<%= booking.pet.photo %>')">
+  </div>
+  <div class="testing-card-product-infos">
+    <h2><%= booking.pet.name %></h2>
+    <h3><%= booking.pet.species %></h3>
+    <p><%= booking.pet.description %></p>
+    <p>From: <%= booking.start_on %> - To: <%= booking.end_on %></p>
+    <h3>Price per day R$<%= booking.pet.price %></h3>
+  </div>
+</div>
