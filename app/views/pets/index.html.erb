@@ -1,20 +1,14 @@
 <div class="container">
   <div>
     <h1>Pets to snuggle on NUZZLE</h1>
-      <br>
-      <br>
-      <div class='pet_list'>
-        <% @pets.each do |pet| %>
-          <%= render "shared/pet_card", pet: pet %>
-        <% end %>
-      </div>
-      <br>
-      <form class="form-inline">
-      <br>
-        <p><%= link_to "Your bookings", bookings_path, class: "button" %></p>
-        <br>
-        <p><%= link_to "Add your pet", new_pet_path, class: "button" %></p>
-        <br>
-        </form>
+    <div class='pet_list'>
+      <% @pets.each do |pet| %>
+        <%= render "shared/pet_card", pet: pet %>
+      <% end %>
     </div>
+    <div>
+      <%= link_to "Your bookings", bookings_path, class: "button" %>
+      <%= link_to "Add your pet", new_pet_path, class: "button" %>
+    </div>
+  </div>
 </div>

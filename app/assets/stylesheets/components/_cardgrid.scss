@@ -33,7 +33,6 @@
 }
 
 .pet_card {
-  width: 20em;
   padding: 20px;
   background-size: contain;
   border-radius: 5px;
@@ -42,6 +41,5 @@
 .pet_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3%;
-
+  grid-gap: 16px; // <------ percentage broke the whole thing
 }
