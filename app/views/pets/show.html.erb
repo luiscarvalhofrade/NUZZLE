@@ -1,7 +1,4 @@
-<p><%= render "shared/card" %> </p>
-<p><%= @pet.name %></p>
-<p>Description: <%= @pet.description %></p>
-<p>Price: R$<%= @pet.price %></p>
+<p><%= render "shared/card", pet: @pet %> </p>
 <br>
 <% if @pet.owner == current_user %>
     <p><%= link_to "You already own this pet!", pets_path(@pet), class: "button" %></p>
