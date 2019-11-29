@@ -6,8 +6,16 @@
   </div>
   <div class="navbar-profile">
     <%= link_to 'logout', destroy_user_session_path, method: :delete  %>
-    <a href="#">My Nuzzle <i class="fas fa-heart"></i> </a>
+    <div class="dropdown-banana">
+      <button class="dropbtn">My Nuzzle
+        <i class="fas fa-heart"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">My Bookings</a>
+        <a href="#">Add A New Pet</a>
+      </div>
+    </div>
+
    <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
   </div>
 </div>
-</html>
