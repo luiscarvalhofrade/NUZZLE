@@ -5,7 +5,9 @@
         <%= simple_form_for [@pet] do |f| %>
           <%= f.input :name %>
             <%= f.input :description, label: 'How would you describe your pet?' %>
+            <%= f.input :species, label: 'What\'s the species of the pet?' %>
             <%= f.input :price, label: 'What\'s the price per day?' %>
+            <%= f.input :photo, label: 'Add a photo' %>
             <%= f.submit "Add your pet!", class: "button"%>
             <% end %>
             <br>
