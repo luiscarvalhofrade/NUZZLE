@@ -12,7 +12,7 @@
               <%= simple_form_for [@pet, @booking] do |f| %>
                 <%= f.input :start_on, label: 'From', as: :string, input_html: {type: :date} %>
                 <%= f.input :end_on, label: 'To', as: :string, input_html: {type: :date} %>
-                <%= f.button :submit, 'Book your nuzzle now!', class: "button", data: {confirm: "Yeay! 🎉 You are now booked in to nuzzle this pet!"}%>
+                <%= f.button :submit, 'Book your nuzzle now!', class: "button", data: {confirm: "Click OK if you'd like to confirm this nuzzle booking!"}%>
                 <% end %>
           </div>
     </div>
